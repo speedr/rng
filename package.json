@@ -1,0 +1,15 @@
+{
+  "name": "rng",
+  "version": "1.0.0",
+  "description": "Seeded random generator",
+  "license": "MIT",
+  "repository": "speedr/rng",
+  "author": "Florent Cailhol",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "random",
+    "rng"
+  ]
+}
