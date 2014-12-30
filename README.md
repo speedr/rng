@@ -5,45 +5,46 @@
 ## Install
 
 ```sh
-$ npm install --save speedr/rng
+$ npm install --save speedr-rng
 ```
 
 ## Usage
 
 ```js
-var rng = require('rng');
-var rand = rng(1337);
+import {Rng} from 'speedr-rng'
 
-rand.int(100);                    // 57
-rand.float();                     // 0.48787342294965175
-rand.bool();                      // false
-rand.range(4, 12);                // 10
-rand.pick(['foo', 'bar', 'baz']); // 'baz'
+let rng = new Rng(1337)
+
+rng.int(100)                    // 57
+rng.float()                     // 0.48787342294965175
+rng.bool()                      // false
+rng.range(4, 12)                // 10
+rng.pick(['foo', 'bar', 'baz']) // 'baz'
 ```
 
 ## API
 
-### rng(seed)
+### new Rng(seed)
 
 Returns a RNG using the specified `seed`.
 
-#### rand.int(max)
+#### rng.int(max)
 
 Returns an integer within [0, max).
 
-#### rand.float()
+#### rng.float()
 
 Returns a float within [0.0, 1.0).
 
-#### rand.bool()
+#### rng.bool()
 
 Returns a boolean.
 
-#### rand.range(min, max)
+#### rng.range(min, max)
 
 Returns an integer within [min, max).
 
-#### rand.pick(source)
+#### rng.pick(source)
 
 Returns an element from the source.
 
